@@ -45,7 +45,7 @@ fi
 
 if command -v curl &> /dev/null; then
   curl -sSf -o "$keytar_path" https://raw.githubusercontent.com/stevenlafl/node-keytar/master/lib/keytar.js
-  success "Downloaded keytar.js file"
+  success "keytar.js file modified successfully."
 else
   error "ERROR: curl is not installed. Exiting..."
 fi
