@@ -52,3 +52,9 @@ fi
 
 # Find the line starting with "let credsDir" and replace it with the user's input
 sed -i "/let credsDir/c\let credsDir = '$creds_dir';" "$keytar_path"
+
+if [ -z "$ENCRYPTION_KEY" ]; then
+  echo -e "\n----------------------------------------------------------"
+  echo -e "WARNING: Credentials will be stored in plain text by default.\nIf you want to encrypt the credentials, please set the ENCRYPTION_KEY environment variable."
+  echo "----------------------------------------------------------"
+fi
